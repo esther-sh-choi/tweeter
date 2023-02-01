@@ -49,10 +49,10 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
 
-#new-tweet-bottom:hover {
-  box-shadow: 5px 2px 3px #0000008f;
+  &:hover {
+    box-shadow: 5px 2px 3px #0000008f;
+  }
 }
 
 #new-tweet-bottom.hide {
