@@ -2,11 +2,12 @@ nav.navbar-top {
   height: 120px;
   width: 100vw;
   color: #d9b08c;
-  padding: 0 1.5em;
+  padding-left: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
 }
 nav.navbar-top .logo {
   font-family: "Bungee", cursive;
@@ -23,10 +24,16 @@ nav.navbar-top button#new-tweet {
   outline: none;
   border: none;
   color: #d9b08c;
+  width: 120px;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
   font-size: 20px;
   height: 100%;
   padding: 20px;
   cursor: pointer;
+}
+nav.navbar-top button#new-tweet:hover {
+  transform: scale(1.1);
 }
 nav.navbar-top button#new-tweet.hide {
   display: none;
@@ -54,5 +61,16 @@ nav.navbar-top button#new-tweet.hide {
   }
   100% {
     transform: translateY(0);
+  }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  nav.navbar-top button#new-tweet {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav.navbar-top {
+    background-color: #a40000;
   }
 }

@@ -8,6 +8,7 @@ article.tweet {
   border: 4px solid #2c3531;
   margin: 1em 0;
   padding: 1em;
+  border-radius: 10px;
 }
 article.tweet:hover {
   box-shadow: 5px 5px rgba(44, 53, 49, 0.5647058824);

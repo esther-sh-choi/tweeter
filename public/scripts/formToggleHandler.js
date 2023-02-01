@@ -1,12 +1,11 @@
 const toggleForm = () => {
-  const $form = $("main").children(".new-tweet").children("form");
+  const $form = $("form");
   if ($form.is(":hidden")) {
-    console.log($(window).scrollTop());
-    console.log($("header").height());
+    console.log($("main"));
     if ($(window).scrollTop() > $("header").height()) {
       $("html, body").animate(
         {
-          scrollTop: $form.offset().top,
+          scrollTop: $("form").offset().top + 300,
         },
         1000
       );

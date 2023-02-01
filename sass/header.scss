@@ -16,3 +16,12 @@
 #new-tweet i {
   margin-top: 10px;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    height: calc(100% - 120px);
+    margin-top: 120px;
+    width: calc(350px + 35vw);
+  }
+}
