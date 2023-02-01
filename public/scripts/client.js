@@ -1,28 +1,3 @@
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
-
 /**
  * This function calculates the year/month/day/hour/minute/seconds passed since createdTime and returns it as a string. If the time is greater than 1, add 's' to show that it is plural.
  *
@@ -113,15 +88,6 @@ const loadTweets = () => {
   $.getJSON("/tweets/").then((tweetDataArr) => renderTweets(tweetDataArr));
 };
 
-const toggleForm = () => {
-  const $form = $("main").children(".new-tweet").children("form");
-  if ($form.is(":hidden")) {
-    $form.slideDown("slow");
-  } else {
-    $form.slideUp("slow");
-  }
-};
-
 $(function () {
   const $form = $(".new-tweet").children("form");
   $form.on("submit", function (event) {
@@ -143,46 +109,8 @@ $(function () {
     $textarea.val("");
     const $counter = $(this).children("#tweet-text-bottom").children("output");
     $counter.val(140);
-    console.log("Form submitted, performing ajax call...");
     $.post("/tweets/", $data).then(loadTweets);
   });
-
-  const $closeButton = $(".new-tweet").find(".close-button");
-  $closeButton.on("click", function (event) {
-    event.preventDefault();
-    const $error = $(this).closest("div.error-container");
-    $error.addClass("hidden");
-    const $textarea = $(this)
-      .closest("div.error-container")
-      .siblings("textarea");
-    $textarea.val("");
-    const $counter = $(this)
-      .closest(".error-container")
-      .next("#tweet-text-bottom")
-      .children("output");
-    $counter.val(140);
-    $counter.removeClass("error");
-  });
-
-  const $modalBackdrop = $(".new-tweet").find("div.error-container");
-  $modalBackdrop.on("click", function (event) {
-    if (event.target === this) {
-      event.preventDefault();
-      const $error = $(this).closest("div.error-container");
-      $error.addClass("hidden");
-      const $textarea = $(this).siblings("textarea");
-      $textarea.val("");
-      const $counter = $(this).next("#tweet-text-bottom").children("output");
-      $counter.val(140);
-      $counter.removeClass("error");
-    }
-  });
-
-  const $newTweetButton = $("button#new-tweet");
-  $newTweetButton.on("click", toggleForm);
-
-  const $newTweetButtonBottom = $("#new-tweet-bottom");
-  $newTweetButtonBottom.on("click", toggleForm);
 
   loadTweets();
 });

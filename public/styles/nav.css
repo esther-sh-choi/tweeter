@@ -8,24 +8,24 @@ nav.navbar-top {
   align-items: center;
   position: fixed;
 }
-
-nav.navbar-top > span {
+nav.navbar-top .logo {
   font-family: "Bungee", cursive;
   font-size: 1.5em;
   align-self: center;
+  -webkit-text-stroke: 3px black;
 }
-
-button#new-tweet {
-  background: none;
-  outline: none;
-  border: none;
-  color: #d9b08c;
+nav.navbar-top button#new-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  color: #d9b08c;
   font-size: 20px;
   height: 100%;
+  padding: 20px;
   padding: 20px;
   cursor: pointer;
 }
@@ -36,7 +36,7 @@ button#new-tweet {
   width: 100%;
 }
 
-i.arrow-icon {
+#arrow-icon i {
   position: absolute;
   font-size: 15px;
   color: #d1e8ec;
