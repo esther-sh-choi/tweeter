@@ -1,14 +1,22 @@
+const toggleNewTweetButton = function (selector = this) {
+  const $newTweetButton = $("#new-tweet");
+  const $newTweetButtonBottom = $("#new-tweet-bottom");
+
+  if ($(selector).scrollTop() === 0) {
+    $newTweetButtonBottom.addClass("hide");
+    $newTweetButton.removeClass("hide");
+  } else if ($(selector).scrollTop() >= 120) {
+    $newTweetButtonBottom.removeClass("hide");
+    $newTweetButton.addClass("hide");
+  }
+};
+
 $(() => {
   $("main").on("scroll", function () {
-    const $newTweetButton = $("#new-tweet");
-    const $newTweetButtonBottom = $("#new-tweet-bottom");
+    toggleNewTweetButton("main");
+  });
 
-    if ($("main").scrollTop() === 0) {
-      $newTweetButtonBottom.addClass("hide");
-      $newTweetButton.removeClass("hide");
-    } else if ($("main").scrollTop() >= 120) {
-      $newTweetButtonBottom.removeClass("hide");
-      $newTweetButton.addClass("hide");
-    }
+  $(window).on("scroll", function () {
+    toggleNewTweetButton();
   });
 });

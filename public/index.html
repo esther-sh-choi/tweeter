@@ -3,7 +3,10 @@
   <head>
     <!-- Meta Information -->
     <!-- Disable viewport zooming -->
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -56,14 +59,9 @@
       type="text/javascript"
       src="/scripts/newButtonToggleHandler.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/scripts/errorHandler.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/scripts/formToggleHandler.js"
-    ></script>
+    <script type="text/javascript" src="/scripts/errorHandler.js"></script>
+    <script type="text/javascript" src="/scripts/formToggleHandler.js"></script>
+    <script type="text/javascript" src="/scripts/myTimeAgo.js"></script>
   </head>
 
   <body>
@@ -75,7 +73,7 @@
         <span id="arrow-icon"
           ><i class="fa-solid fa-angles-down arrow-icon"></i
         ></span>
-      </but>
+      </button>
     </nav>
     <!-- Header with avatar and name -->
     <header class="page-header">
@@ -114,9 +112,10 @@
         </form>
       </section>
       <section id="tweets-container"></section>
-      <button id='new-tweet-bottom' class="hide">
-      <span><i class='fa-solid fa-angles-up arrow-icon'></i></span>
-      <p id="toggle-label">Close Form</p></button>
+      <button id="new-tweet-bottom" class="hide">
+        <span><i class="fa-solid fa-angles-up arrow-icon"></i></span>
+        <p id="toggle-label">Close Form</p>
+      </button>
     </main>
   </body>
 </html>
