@@ -28,6 +28,9 @@ nav.navbar-top button#new-tweet {
   padding: 20px;
   cursor: pointer;
 }
+nav.navbar-top button#new-tweet.hide {
+  display: none;
+}
 
 #arrow-icon {
   position: relative;

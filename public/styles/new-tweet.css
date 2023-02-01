@@ -16,12 +16,10 @@ form > label {
   padding: 15px;
   color: #d1e8ec;
 }
-
 #tweet-text:focus {
   border-color: #f6dabd;
 }
-
-textarea::placeholder {
+#tweet-text::placeholder {
   color: #d1e8ec;
 }
 
@@ -30,8 +28,7 @@ textarea::placeholder {
   justify-content: space-between;
   font-family: "Bungee", cursive;
 }
-
-.button {
+#tweet-text-bottom .button {
   background-color: #2c3531;
   outline: none;
   border: none;
@@ -41,7 +38,8 @@ textarea::placeholder {
 }
 
 output.counter.error {
-  color: red;
+  color: #a40000;
+  -webkit-text-stroke: 1px #ffffff;
 }
 
 .error-container {
@@ -55,8 +53,7 @@ output.counter.error {
   justify-content: center;
   align-items: center;
 }
-
-.error-container > .error-modal {
+.error-container .error-modal {
   background-color: #015558;
   box-shadow: 5px 5px #000000;
   border: 2px solid #d1e8ec;
@@ -68,8 +65,7 @@ output.counter.error {
   justify-content: center;
   align-items: center;
 }
-
-.error-modal > .close-button.icon {
+.error-container .error-modal .close-button.icon {
   background: none;
   outline: none;
   border: none;
@@ -84,12 +80,10 @@ output.counter.error {
   justify-content: center;
   align-items: center;
 }
-
-.error-modal > .close-button.icon:hover {
+.error-container .error-modal .close-button.icon:hover {
   font-size: 1.2em;
 }
-
-.error-modal > .close-button.main {
+.error-container .error-modal .close-button.main {
   background-color: #2c3531;
   outline: none;
   border: none;
@@ -100,8 +94,7 @@ output.counter.error {
   margin-top: 0.5em;
   font-family: "Bungee", cursive;
 }
-
-.error-modal > p {
+.error-container .error-modal p {
   text-align: center;
   margin: 30px 50px;
 }

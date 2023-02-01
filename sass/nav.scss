@@ -36,6 +36,10 @@ nav.navbar-top {
     padding: 20px;
 
     cursor: pointer;
+
+    &.hide {
+      display: none;
+    }
   }
 }
 
