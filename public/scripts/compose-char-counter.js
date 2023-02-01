@@ -11,9 +11,11 @@ $(function () {
     $counter.html(counter);
     if (counter < 0) {
       $counter.addClass("error");
+      $(this).addClass("error");
     }
     if (counter >= 0) {
       $counter.removeClass("error");
+      $(this).removeClass("error");
     }
   });
 });

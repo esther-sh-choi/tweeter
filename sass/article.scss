@@ -7,7 +7,7 @@ article.tweet {
   color: #2c3531;
   border: 4px solid #2c3531;
   margin: 1em 0;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 10px;
 
   &:hover {
@@ -17,11 +17,43 @@ article.tweet {
   header {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding-top: 10px;
 
     h3 {
+      margin: 0;
       margin-left: 10px;
       font-weight: 300;
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    padding: 10px;
+    margin: 0.5em 0;
+    font-size: 1.3rem;
+    overflow-wrap: break-word;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 2px solid #2c3531;
+
+    h6 {
+      margin: 0;
+      padding-left: 0.5em;
+    }
+
+    i {
+      margin: 5px;
+      font-size: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: #49b5b7;
+      }
     }
   }
 }
@@ -29,32 +61,44 @@ article.tweet {
 .handle {
   margin-left: auto;
   font-weight: 600;
+  font-size: 1rem;
   color: #49b5b7;
 }
 
-article.tweet p {
-  padding: 10px;
-  overflow-wrap: break-word;
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
 }
 
-article.tweet footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 2px solid #2c3531;
-}
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  article.tweet {
+    padding: 1em;
 
-article.tweet footer h6 {
-  margin: 0;
-  padding-left: 1.5em;
-}
+    header {
+      padding: 0 10px;
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
 
-article.tweet footer i {
-  margin: 5px;
-  cursor: pointer;
-}
+    p {
+      padding: 10px;
+      margin: 1.5em 0;
+      font-size: inherit;
+    }
 
-article.tweet footer i:hover {
-  color: #49b5b7;
+    footer {
+      h6 {
+        padding-left: 1.5em;
+      }
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .handle {
+    font-size: inherit;
+  }
 }

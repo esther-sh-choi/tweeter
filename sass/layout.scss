@@ -23,6 +23,7 @@ main {
   width: 90%;
   background-color: inherit;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 #new-tweet-bottom {
@@ -49,10 +50,6 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 3px #0000008f;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &.hide {
@@ -60,7 +57,7 @@ main {
   }
 
   #toggle-label {
-    margin-top: 5px;
+    margin: 7px 0 0;
     color: #ffffff;
     font-size: 15px;
     font-family: "Bungee", cursive;
@@ -77,11 +74,18 @@ main {
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-    // align-items: center;
   }
 
   main {
-    padding: 180px 3rem 0;
+    padding: 180px 3rem;
     overflow-y: auto;
+  }
+
+  #new-tweet-bottom {
+    span {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

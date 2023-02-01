@@ -65,6 +65,9 @@ nav.navbar-top button#new-tweet.hide {
 }
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
+  nav.navbar-top {
+    padding: 0 1.5em;
+  }
   nav.navbar-top button#new-tweet {
     width: auto;
   }

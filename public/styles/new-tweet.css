@@ -23,6 +23,9 @@ form > label {
 #tweet-text::placeholder {
   color: #d1e8ec;
 }
+#tweet-text.error {
+  border-color: #a40000;
+}
 
 #tweet-text-bottom {
   display: flex;

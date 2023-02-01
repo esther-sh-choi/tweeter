@@ -23,6 +23,7 @@ main {
   width: 90%;
   background-color: inherit;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 #new-tweet-bottom {
@@ -50,14 +51,11 @@ main {
   align-items: center;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5607843137);
 }
-#new-tweet-bottom span:hover {
-  transform: scale(1.1);
-}
 #new-tweet-bottom.hide {
   display: none;
 }
 #new-tweet-bottom #toggle-label {
-  margin-top: 5px;
+  margin: 7px 0 0;
   color: #ffffff;
   font-size: 15px;
   font-family: "Bungee", cursive;
@@ -72,7 +70,10 @@ main {
     display: flex;
   }
   main {
-    padding: 180px 3rem 0;
+    padding: 180px 3rem;
     overflow-y: auto;
+  }
+  #new-tweet-bottom span:hover {
+    transform: scale(1.1);
   }
 }

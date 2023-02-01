@@ -38,6 +38,10 @@ form > label {
   &::placeholder {
     color: #d1e8ec;
   }
+
+  &.error {
+    border-color: #a40000;
+  }
 }
 
 #tweet-text-bottom {
