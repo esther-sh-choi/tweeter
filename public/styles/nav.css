@@ -26,7 +26,6 @@ nav.navbar-top button#new-tweet {
   font-size: 20px;
   height: 100%;
   padding: 20px;
-  padding: 20px;
   cursor: pointer;
 }
 
@@ -35,8 +34,7 @@ nav.navbar-top button#new-tweet {
   height: 30px;
   width: 100%;
 }
-
-#arrow-icon i {
+#arrow-icon i.arrow-icon {
   position: absolute;
   font-size: 15px;
   color: #d1e8ec;
