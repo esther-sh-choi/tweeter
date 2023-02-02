@@ -1,4 +1,4 @@
-# Tweeter Project
+# Esther's Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
 
@@ -10,13 +10,15 @@ Many improvements were made to heighten user experience and the responsiveness a
 
 ## Table of Content
 
-- [Description](https://github.com/esther-sh-choi/tweeter#esthers-tinyapp-project)
+- [Description](https://github.com/esther-sh-choi/tweeter#esthers-tweeter-project)
 - [Final Product](https://github.com/esther-sh-choi/tweeter#final-product)
   - [Desktop](https://github.com/esther-sh-choi/tweeter#desktop)
   - [Desktop to Tablet](https://github.com/esther-sh-choi/tweeter#desktop-to-tablet)
   - [Mobile](https://github.com/esther-sh-choi/tweeter#mobile)
-- [Dependencies](https://github.com/esther-sh-choi/tweeter#dependencies)
+  - [Button Animation](https://github.com/esther-sh-choi/tweeter#button-animation)
 - [Getting Started](https://github.com/esther-sh-choi/tweeter#getting-started)
+- [Get Started with Codespaces](https://github.com/esther-sh-choi/tweeter#using-codespaces)
+- [Dependencies](https://github.com/esther-sh-choi/tweeter#dependencies)
 
 ## Final Product
 
@@ -54,6 +56,14 @@ https://user-images.githubusercontent.com/100092097/216224714-3e6d3c67-2654-4571
 - _This prevents users from scrolling all the way up the page to post a new tweet._
 
 https://user-images.githubusercontent.com/100092097/216224731-c1f0c76c-fe4c-4578-9ae9-50be12a574a6.mp4
+
+#### Button Animation:
+
+- The button used in the assignment was a little misleading. Upward arrow usually means go to top of page.
+- So I added an animation that rotates arrow downward/upward depending on if the user wants to hide/show the form.
+
+https://user-images.githubusercontent.com/100092097/216400851-c3a2f2ec-3111-4573-bf7e-f40147e4f07c.mp4
+
 
 ## Getting Started
 
