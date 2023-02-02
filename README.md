@@ -62,6 +62,13 @@ https://user-images.githubusercontent.com/100092097/216224731-c1f0c76c-fe4c-4578
 3. Start the web server using the `npm start` or `npm run local` (nodemon) command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Using Codespaces
+
+1. Open the **<> Code** tab and select **Codespaces**
+2. Click on **Esther's Tweeter Clone** (https://github.com/codespaces/esther-sh-choi-reimagined-enigma-5w45p74xxjf77g5)
+3. In the provided terminal, start the web server using the `npm start` or `npm run local` (nodemon) command.
+4. When the prompt appears on screen, click on **Open in browser**.
+
 ## Dependencies
 
 - Express
