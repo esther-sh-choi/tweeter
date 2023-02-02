@@ -17,13 +17,6 @@ nav.navbar-top {
 
   position: fixed;
 
-  .logo {
-    font-family: "Bungee", cursive;
-    font-size: 1.5em;
-    align-self: center;
-    -webkit-text-stroke: 3px black;
-  }
-
   button#new-tweet {
     @include verticalAlignCenter;
     background: none;
@@ -76,6 +69,20 @@ nav.navbar-top {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+#logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Bungee", cursive;
+  font-size: 1.5em;
+  align-self: center;
+  -webkit-text-stroke: 3px black;
+
+  img {
+    height: 50px;
+    object-fit: contain;
   }
 }
 

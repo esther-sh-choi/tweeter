@@ -9,6 +9,8 @@
     />
     <title>Tweeter - Home Page</title>
 
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -67,7 +69,13 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar-top">
-      <span class="logo">tweeter</span>
+      <div id="logo">
+        <img
+          src="/images/bird.svg"
+          alt="white orgami bird"
+          id="logo-bird"
+        /><span>tweeter</span>
+      </div>
       <button id="new-tweet">
         <span><strong>Write</strong> a new tweet</span>
         <span id="arrow-icon"

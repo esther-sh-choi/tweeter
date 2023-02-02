@@ -8,12 +8,6 @@ nav.navbar-top {
   align-items: center;
   position: fixed;
 }
-nav.navbar-top .logo {
-  font-family: "Bungee", cursive;
-  font-size: 1.5em;
-  align-self: center;
-  -webkit-text-stroke: 3px black;
-}
 nav.navbar-top button#new-tweet {
   display: flex;
   flex-direction: column;
@@ -62,6 +56,19 @@ nav.navbar-top button#new-tweet.hide {
     transform: translateY(0);
   }
 }
+#logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Bungee", cursive;
+  font-size: 1.5em;
+  align-self: center;
+  -webkit-text-stroke: 3px black;
+}
+#logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
   nav.navbar-top {
