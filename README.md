@@ -1,4 +1,4 @@
-# Tweeter Project
+# Esther's Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
 
@@ -10,13 +10,15 @@ Many improvements were made to heighten user experience and the responsiveness a
 
 ## Table of Content
 
-- [Description](https://github.com/esther-sh-choi/tweeter#esthers-tinyapp-project)
+- [Description](https://github.com/esther-sh-choi/tweeter#esthers-tweeter-project)
 - [Final Product](https://github.com/esther-sh-choi/tweeter#final-product)
   - [Desktop](https://github.com/esther-sh-choi/tweeter#desktop)
   - [Desktop to Tablet](https://github.com/esther-sh-choi/tweeter#desktop-to-tablet)
   - [Mobile](https://github.com/esther-sh-choi/tweeter#mobile)
-- [Dependencies](https://github.com/esther-sh-choi/tweeter#dependencies)
+  - [Button Animation](https://github.com/esther-sh-choi/tweeter#button-animation)
 - [Getting Started](https://github.com/esther-sh-choi/tweeter#getting-started)
+- [Get Started with Codespaces](https://github.com/esther-sh-choi/tweeter#using-codespaces)
+- [Dependencies](https://github.com/esther-sh-choi/tweeter#dependencies)
 
 ## Final Product
 
@@ -55,12 +57,28 @@ https://user-images.githubusercontent.com/100092097/216224714-3e6d3c67-2654-4571
 
 https://user-images.githubusercontent.com/100092097/216224731-c1f0c76c-fe4c-4578-9ae9-50be12a574a6.mp4
 
+#### Button Animation:
+
+- The button used in the assignment was a little misleading. Upward arrow usually means go to top of page.
+- So I added an animation that rotates arrow downward/upward depending on if the user wants to hide/show the form.
+
+https://user-images.githubusercontent.com/100092097/216400851-c3a2f2ec-3111-4573-bf7e-f40147e4f07c.mp4
+
+
 ## Getting Started
 
 1. Clone this repository onto your local device.
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm start` or `npm run local` (nodemon) command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+
+## Using Codespaces
+
+1. Open the **<> Code** tab and select **Codespaces**
+2. Click on **Esther's Tweeter Clone**
+3. Or skip the steps above and click this link -> https://github.com/codespaces/esther-sh-choi-reimagined-enigma-5w45p74xxjf77g5
+4. In the provided terminal, start the web server using the `npm start` or `npm run local` (nodemon) command.
+5. When the prompt appears on screen, click on **Open in browser**.
 
 ## Dependencies
 
