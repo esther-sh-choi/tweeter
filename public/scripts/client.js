@@ -58,7 +58,7 @@ const createTweetElement = (data) => {
  * Once the data is loaded successfully, the tweet data arrays are passed into the renderTweets function.
  */
 const loadTweets = () => {
-  $.getJSON("/tweets/").then((tweetDataArr) => renderTweets(tweetDataArr));
+  $.getJSON("/tweets/", (tweetDataArr) => renderTweets(tweetDataArr));
 };
 
 /**
@@ -92,7 +92,7 @@ $(function () {
     const $counter = $(this).children("#tweet-text-bottom").children("output");
     $counter.val(140);
     // Make a POST request to /tweets, which will fire loadTweets function.
-    $.post("/tweets/", $data).then(loadTweets);
+    $.post("/tweets/", $data, loadTweets);
   });
 
   // Automatically loads tweet data that is already in the server.
