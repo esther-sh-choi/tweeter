@@ -50,6 +50,10 @@ main {
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5607843137);
+  transition: ease-in-out 0.2s;
+}
+#new-tweet-bottom span.show-form {
+  transform: rotate(180deg);
 }
 #new-tweet-bottom.hide {
   display: none;
@@ -63,7 +67,6 @@ main {
   word-wrap: break-word;
 }
 
-/* Tablet Styles */
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   body {
@@ -73,7 +76,16 @@ main {
     padding: 180px 3rem;
     overflow-y: auto;
   }
+  #new-tweet-bottom span {
+    transition: linear 0.2s;
+  }
   #new-tweet-bottom span:hover {
     transform: scale(1.1);
+  }
+  #new-tweet-bottom .show-form {
+    transform: rotate(180deg);
+  }
+  #new-tweet-bottom .show-form:hover {
+    transform: scale(1.1) rotate(180deg);
   }
 }

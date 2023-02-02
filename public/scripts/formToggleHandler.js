@@ -33,9 +33,11 @@ const toggleForm = () => {
 
     $form.slideDown("slow");
     $("#toggle-label").html("Close Form");
+    $("#new-tweet-bottom").children("span").removeClass("show-form");
   } else {
     $form.slideUp("slow");
     $("#toggle-label").html("Show Form");
+    $("#new-tweet-bottom").children("span").addClass("show-form");
   }
 };
 

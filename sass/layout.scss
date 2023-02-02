@@ -50,6 +50,11 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 3px #0000008f;
+    transition: ease-in-out 0.2s;
+  }
+
+  span.show-form {
+    transform: rotate(180deg);
   }
 
   &.hide {
@@ -66,10 +71,6 @@ main {
   }
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 768px) {
-}
-
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   body {
@@ -83,8 +84,16 @@ main {
 
   #new-tweet-bottom {
     span {
+      transition: linear 0.2s;
       &:hover {
         transform: scale(1.1);
+      }
+    }
+
+    .show-form {
+      transform: rotate(180deg);
+      &:hover {
+        transform: scale(1.1) rotate(180deg);
       }
     }
   }
