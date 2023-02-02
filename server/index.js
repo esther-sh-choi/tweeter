@@ -6,7 +6,6 @@ const PORT = 8080;
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-process.env.TZ = "America/Toronto";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
