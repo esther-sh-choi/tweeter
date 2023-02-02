@@ -27,12 +27,18 @@ const createTweetElement = (data) => {
   const { user, content, created_at } = data;
 
   let $tweet = $('<article class="tweet"></article>');
+
   const header = $(`<header>
     <img src="${user.avatars}" alt="${user.name}'s avatar" />
     <h3>${user.name}</h3>
     <div class="handle">${user.handle}</div>
   </header>`);
+
   const paragraph = $("<p></p>");
+  paragraph.text(content.text);
+
+  // Although the timeago.format() is already imported and ready to be used,
+  // I wanted to practice JS skills by implementing my own timeago function.
   const footer = $(`<footer>
     <h6>${myTimeAgo(created_at)}</h6>
     <div class="footer-icons">
@@ -41,7 +47,7 @@ const createTweetElement = (data) => {
       <i class="fa-solid fa-heart"></i>
   </div>
   </footer>`);
-  paragraph.text(content.text);
+
   $tweet.append(header).append(paragraph).append(footer);
 
   return $tweet;
