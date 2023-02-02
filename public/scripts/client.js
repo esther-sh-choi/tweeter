@@ -1,15 +1,16 @@
 /**
  * This function takes in an array of tweet data objects and calls the createTweetElement function
- * for each tweet data in the array. Then it appends the return value from the createTweetElement function
- * to the #tweets-container section, displaying a list of tweets in the browser.
+ * for each tweet data in the array. Then it appends the return value from the createTweetElement function to the #tweets-container section, displaying a list of tweets in the browser.
+ * Tweets are displayed in a reverse order because I want the new messages to appear before the older messages.
  *
  * @param {array} tweetObjects Array of objects that contain tweet data.
  * @return {undefined} This function does not return any value.
  */
 const renderTweets = (tweets) => {
   $("#tweets-container").empty();
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
+
+  for (let i = tweets.length - 1; i >= 0; i--) {
+    const $tweet = createTweetElement(tweets[i]);
 
     $("#tweets-container").append($tweet);
   }
