@@ -32,4 +32,5 @@ const myTimeAgo = (createdTime) => {
   if (seconds) {
     return `${seconds} second${seconds > 1 ? "s" : ""} ago`;
   }
+  return "Just now";
 };
