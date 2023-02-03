@@ -41,7 +41,7 @@ const createTweetElement = (data) => {
   // Although the timeago.format() is already imported and ready to be used,
   // I wanted to practice JS skills by implementing my own timeago function.
   const footer = $(`<footer>
-    <h6>${myTimeAgo(created_at)}</h6>
+    <h6>${timeago.format(created_at)}</h6>
     <div class="footer-icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
