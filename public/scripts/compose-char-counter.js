@@ -4,7 +4,7 @@
  * The counter changes when user finishes typing a key (key up).
  */
 $(function () {
-  $("#tweet-text").on("keyup", function () {
+  $("#tweet-text").on("input", function () {
     // calculates the number of charactered typed by the user (excluding spaces)
     // counter gets the remaining available character count
     let counter = 140 - $(this).val().replace(/\s/g, "").length;

@@ -1,6 +1,6 @@
 /**
  * This function takes in the event object in a click event handler.
- * This will hide the error modal, and reset the form and counter.
+ * This will hide the error modal.
  *
  * @param {event} Object Event object created when the user clicks an element.
  * @return {undefined} This function does not return any value.
@@ -10,14 +10,6 @@ const closeErrorModal = (event) => {
 
   const $error = $("#tweet-text").next("div.error-container");
   $error.addClass("hidden");
-
-  const $textarea = $("#tweet-text");
-  $textarea.val("");
-  $textarea.removeClass("error");
-
-  const $counter = $("#tweet-text-bottom").children("output");
-  $counter.val(140);
-  $counter.removeClass("error");
 };
 
 /**
