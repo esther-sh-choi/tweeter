@@ -64,7 +64,6 @@ https://user-images.githubusercontent.com/100092097/216224731-c1f0c76c-fe4c-4578
 
 https://user-images.githubusercontent.com/100092097/216400851-c3a2f2ec-3111-4573-bf7e-f40147e4f07c.mp4
 
-
 ## Getting Started
 
 1. Clone this repository onto your local device.
@@ -76,7 +75,7 @@ https://user-images.githubusercontent.com/100092097/216400851-c3a2f2ec-3111-4573
 
 1. Open the **<> Code** tab and select **Codespaces**
 2. Click on **Esther's Tweeter Clone**
-3. Or skip the steps above and click this link -> https://github.com/codespaces/esther-sh-choi-reimagined-enigma-5w45p74xxjf77g5
+3. Or skip the steps above and click this link -> https://github.com/codespaces/esther-sh-choi-special-pancake-7j5jvjvxv7p2gjj
 4. In the provided terminal, start the web server using the `npm start` or `npm run local` (nodemon) command.
 5. When the prompt appears on screen, click on **Open in browser**.
 
