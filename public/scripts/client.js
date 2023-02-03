@@ -1,4 +1,18 @@
 /**
+ * Attach a function to be run when DOM is ready.
+ * This function mainly deals with the form submission and rendering tweets.
+ */
+$(function () {
+  // Submit handler
+  // When user clicks on the submit button, the callback is fired.
+  const $form = $(".new-tweet").children("form");
+  $form.on("submit", errorHandler);
+
+  // Automatically loads tweet data that is already in the server.
+  loadTweets();
+});
+
+/**
  * This function takes in an array of tweet data objects and calls the createTweetElement function
  * for each tweet data in the array. Then it appends the return value from the createTweetElement function to the #tweets-container section, displaying a list of tweets in the browser.
  * Tweets are displayed in a reverse order because I want the new messages to appear before the older messages.
@@ -62,40 +76,28 @@ const loadTweets = () => {
   $.getJSON("/tweets/", (tweetDataArr) => renderTweets(tweetDataArr));
 };
 
-/**
- * Attach a function to be run when DOM is ready.
- * This function mainly deals with the form submission and rendering tweets.
- */
-$(function () {
-  // Submit handler
-  // When user clicks on the submit button, the callback is fired.
-  const $form = $(".new-tweet").children("form");
-  $form.on("submit", function (event) {
-    event.preventDefault();
-    const $error = $(this).children("div.error-container");
-    const $errorMsg = $error.find(".error-message");
-    const $textarea = $(this).children("textarea");
-    const $data = $textarea.serialize();
+const errorHandler = function (event) {
+  event.preventDefault();
+  const $error = $(this).children("div.error-container");
+  const $errorMsg = $error.find(".error-message");
+  const $textarea = $(this).children("textarea");
+  const $data = $textarea.serialize();
 
-    // If there is no input from user, display error modal and the corresponding error message.
-    if (!$textarea.val().trim()) {
-      $errorMsg.html("You cannot upload a blank tweet.");
-      return $error.removeClass("hidden");
-    }
-    // If user inputs more than 140 characters (excluding spaces), display error modal with corresponding error message.
-    if ($textarea.val().replace(/\s/g, "").length > 140) {
-      $errorMsg.html("Exceeded the maximum character limit of 140.");
-      return $error.removeClass("hidden");
-    }
+  // If there is no input from user, display error modal and the corresponding error message.
+  if (!$textarea.val().trim()) {
+    $errorMsg.html("You cannot upload a blank tweet.");
+    return $error.removeClass("hidden");
+  }
+  // If user inputs more than 140 characters (excluding spaces), display error modal with corresponding error message.
+  if ($textarea.val().replace(/\s/g, "").length > 140) {
+    $errorMsg.html("Exceeded the maximum character limit of 140.");
+    return $error.removeClass("hidden");
+  }
 
-    // If submission successful, reset the form value and the counter display.
-    $textarea.val("");
-    const $counter = $(this).children("#tweet-text-bottom").children("output");
-    $counter.val(140);
-    // Make a POST request to /tweets, which will fire loadTweets function.
-    $.post("/tweets/", $data, loadTweets);
-  });
-
-  // Automatically loads tweet data that is already in the server.
-  loadTweets();
-});
+  // If submission successful, reset the form value and the counter display.
+  $textarea.val("");
+  const $counter = $(this).children("#tweet-text-bottom").children("output");
+  $counter.val(140);
+  // Make a POST request to /tweets, which will fire loadTweets function.
+  $.post("/tweets/", $data, loadTweets);
+};

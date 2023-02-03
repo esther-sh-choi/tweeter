@@ -1,9 +1,21 @@
 /**
+ * Attach a function to be run when DOM is ready.
+ * This function container click handlers that toggles form.
+ */
+$(() => {
+  const $newTweetButton = $("button#new-tweet");
+  $newTweetButton.on("click", toggleFormHandler);
+
+  const $newTweetButtonBottom = $("#new-tweet-bottom");
+  $newTweetButtonBottom.on("click", toggleFormHandler);
+});
+
+/**
  * This function toggles the form, which slides up and down.
  * When the form is closed, the bottom toggle button's label changes to "Show Form".
  * When the form is opened, the bottom toggle button's label changes to "Close Form".
  */
-const toggleForm = () => {
+const toggleFormHandler = () => {
   const $form = $("form");
   if ($form.is(":hidden")) {
     // Desktop version
@@ -40,15 +52,3 @@ const toggleForm = () => {
     $("#new-tweet-bottom").children("span").addClass("show-form");
   }
 };
-
-/**
- * Attach a function to be run when DOM is ready.
- * This function container click handlers that toggles form.
- */
-$(() => {
-  const $newTweetButton = $("button#new-tweet");
-  $newTweetButton.on("click", toggleForm);
-
-  const $newTweetButtonBottom = $("#new-tweet-bottom");
-  $newTweetButtonBottom.on("click", toggleForm);
-});

@@ -1,4 +1,22 @@
 /**
+ * Attach a function to be run when DOM is ready.
+ * This function container click handlers that toggles form.
+ */
+$(() => {
+  // Desktop version
+  // if user scrolled down to below the nav bar, the top bottom will disappear and the bottom button will appear
+  $("main").on("scroll", function () {
+    toggleNewTweetButton("main");
+  });
+
+  // Tablet, mobile version
+  // if user scrolled down to below the nav bar, the top bottom will disappear and the bottom button will appear
+  $(window).on("scroll", function () {
+    toggleNewTweetButton();
+  });
+});
+
+/**
  * This function takes in a jQuery selctor (default is this keyword) and toggles the new tweet button depending on where the user is on the screen (scroll position).
  *
  * @param {selector} selector The name of the selector (i.e., element, id, class, etc.). If it not given, the default value is 'this'.
@@ -18,21 +36,3 @@ const toggleNewTweetButton = function (selector = this) {
     $newTweetButton.addClass("hide");
   }
 };
-
-/**
- * Attach a function to be run when DOM is ready.
- * This function container click handlers that toggles form.
- */
-$(() => {
-  $("main").on("scroll", function () {
-    // Desktop version
-    // if user scrolled down to below the nav bar, the top bottom will disappear and the bottom button will appear
-    toggleNewTweetButton("main");
-  });
-
-  $(window).on("scroll", function () {
-    // Tablet, mobile version
-    // if user scrolled down to below the nav bar, the top bottom will disappear and the bottom button will appear
-    toggleNewTweetButton();
-  });
-});
