@@ -6,7 +6,7 @@ $(function () {
   // Submit handler
   // When user clicks on the submit button, the callback is fired.
   const $form = $(".new-tweet").children("form");
-  $form.on("submit", errorHandler);
+  $form.on("submit", submitHandler);
 
   // Automatically loads tweet data that is already in the server.
   loadTweets();
@@ -76,7 +76,7 @@ const loadTweets = () => {
   $.getJSON("/tweets/", (tweetDataArr) => renderTweets(tweetDataArr));
 };
 
-const errorHandler = function (event) {
+const submitHandler = function (event) {
   event.preventDefault();
   const $error = $(this).children("div.error-container");
   const $errorMsg = $error.find(".error-message");
@@ -94,10 +94,11 @@ const errorHandler = function (event) {
     return $error.removeClass("hidden");
   }
 
-  // If submission successful, reset the form value and the counter display.
-  $textarea.val("");
-  const $counter = $(this).children("#tweet-text-bottom").children("output");
-  $counter.val(140);
   // Make a POST request to /tweets, which will fire loadTweets function.
-  $.post("/tweets/", $data, loadTweets);
+  $.post("/tweets/", $data).then(() => {
+    // If submission successful, reset the form value and the counter display.
+    // .trigger() will trigger the input handler of textarea
+    $textarea.val("").trigger("input");
+    loadTweets();
+  });
 };
