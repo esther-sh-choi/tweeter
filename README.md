@@ -75,7 +75,7 @@ https://user-images.githubusercontent.com/100092097/216400851-c3a2f2ec-3111-4573
 
 1. Open the **<> Code** tab and select **Codespaces**
 2. Click on **Esther's Tweeter Clone**
-3. Or skip the steps above and click this link -> https://github.com/codespaces/esther-sh-choi-vigilant-halibut-4pvpjpjrgwvhq5w
+3. Or skip the steps above and click this link -> https://github.com/codespaces/esther-sh-choi-fuzzy-sniffle-7j5jvjvx5qj25
 4. In the provided terminal, start the web server using the `npm start` command.
 5. When the prompt appears on screen, click on **Open in browser**.
 
